@@ -8,6 +8,8 @@ import { ZeninformationComponent } from './zeninformation/zeninformation.compone
 import { ZenfooterComponent } from './zenfooter/zenfooter.component';
 import { TestdeleteComponent } from './testdelete/testdelete.component';
 import { ZenLoginComponent } from './zen-login/zen-login.component';
+import { ProductcontainerComponent } from './productcontainer/productcontainer.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ZenLoginComponent } from './zen-login/zen-login.component';
     ZeninformationComponent,
     ZenfooterComponent,
     TestdeleteComponent,
-    ZenLoginComponent
+    ZenLoginComponent,
+    ProductcontainerComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
