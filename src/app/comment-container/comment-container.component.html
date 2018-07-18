@@ -1,0 +1,11 @@
+<!-- <ul>
+    <li *ngFor  = 'let commentList of comments' [comment]='commentList' >
+
+    </li>
+  </ul> -->
+
+
+<p>
+  <app-comment (sendMessage) = "showChildData($event)" *ngFor='let commentList of comments' [comment]='commentList'></app-comment>
+  <strong>{{childData}}</strong>
+</p>

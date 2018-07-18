@@ -1,0 +1,41 @@
+<!-- <p>
+  <input type="text" placeholder="Username"><br>
+  <input type="text" placeholder="password"><br>
+  <button (click)="doLogin()">Login</button>
+</p> -->
+
+<div id="login-container">
+  <label>
+    <span>Username : </span>
+    <input type="text" [(ngModel)]='username' placeholder="Username">
+    The username is {{username}}
+  </label>
+  <br>
+  <label>
+    <span>Password : </span>
+    <input type="password" [(ngModel)]='password' placeholder="Password">
+    The Password is  {{password}}
+  </label>
+  <br>
+  <label>
+    <span>age : </span>
+    <input type="number" [(ngModel)]='age' placeholder="Age">
+    The age is  {{age*12}}
+  </label>
+  <br>
+  <button (click)="doLogin()">Login</button>
+  <div *ngIf ='student'>
+    The name of the Daisy is <strong>{{student.firstName}}</strong> The age is <strong>{{student.age}}</strong>
+  </div>  <br>
+  <input type="number" [(ngModel)]='borderValue'> <br><br>
+  <table border="{{borderValue}}">
+    <tr>
+      <td>Hello</td>
+    </tr>
+  </table>
+
+
+
+  The name of the Daisy is <strong>{{student?.firstName}}</strong> The age is <strong>{{student?.age}}</strong>
+
+</div>
