@@ -1,3 +1,20 @@
-<p>
-  product Name is {{name.name}} and Price is {{name.Price}}
-</p>
+<div>
+  <select [(ngModel)]="dateFormat">
+    <option value="short">Short Format</option>
+    <option value="medium">Medium Format</option>
+    <option value="long">Long Format</option>
+    <option value="full">Full Format</option>
+    <option value="longtime">Long Time Format</option>
+    <option value="fulltime">Full Time Format</option>
+  </select>
+
+  <select [(ngModel)]="timeZone">
+      <option value="-0400">NewYork</option>
+      <option value="+0900">Japan</option>
+      <option value="+0530">India</option>
+    </select>
+
+    The Date Mentioned in the Product for expiry is <strong>{{expiryDate | date : dateFormat :timeZone}}</strong>
+    <br>
+  product Name is {{name.name | uppercase}} and Price is {{name.Price/3 | currency:'INR':'symbol':'4.2-8'}}
+</div>

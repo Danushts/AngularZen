@@ -9,7 +9,13 @@ export class ProductComponent implements OnInit {
 
   @Input()
   name:any;
-  constructor() { }
+  expiryDate;
+  dateFormat;
+  timeZone;
+  constructor() {
+    let dateOb =new Date();
+    this.expiryDate = dateOb.getTime();
+   }
 
   ngOnInit() {
   }
