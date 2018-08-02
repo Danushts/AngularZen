@@ -13,6 +13,8 @@ import { CommentComponent } from './comment/comment.component';
 import { CommentContainerComponent } from './comment-container/comment-container.component';
 import { ZencolorDirective } from './zencolor.directive';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CalService } from "./cal.service";
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,11 @@ import { CalculatorComponent } from './calculator/calculator.component';
     CommentComponent,
     CommentContainerComponent,
     ZencolorDirective,
-    CalculatorComponent
+    CalculatorComponent,
+    FeedbackComponent
   ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [CalService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

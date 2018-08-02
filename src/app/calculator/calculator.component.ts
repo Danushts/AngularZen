@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css'],
-  providers:[CalService]
+
 })
 export class CalculatorComponent implements OnInit {
 
