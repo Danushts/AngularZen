@@ -11,6 +11,8 @@ import { ProductComponent } from './product/product.component';
 import { ProductContainerComponent } from './product-container/product-container.component';
 import { CommentComponent } from './comment/comment.component';
 import { CommentContainerComponent } from './comment-container/comment-container.component';
+import { ZencolorDirective } from './zencolor.directive';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CommentContainerComponent } from './comment-container/comment-container
     ProductComponent,
     ProductContainerComponent,
     CommentComponent,
-    CommentContainerComponent
+    CommentContainerComponent,
+    ZencolorDirective,
+    CalculatorComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
