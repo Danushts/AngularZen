@@ -1,8 +1,18 @@
-button{
+.span-box{
+    border-radius: 20px;
+    border: 2px solid;
     cursor: pointer;
-    font-size: 2em;
-    padding-left: 7px;
+    font-size: 30px;
+    /* padding-left: 7px; */
     padding-right: 7px;
-    background-color: green;
+    
+    background-color: lightgreen;
 
+}
+
+button{
+    background-color: white;
+    /* border-radius: 20px; */
+    padding: 9px;
+    margin: 5px;
 }

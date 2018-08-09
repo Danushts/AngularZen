@@ -5,10 +5,20 @@
 <!-- <zenbanner></zenbanner>
 <zenmenu></zenmenu>
 <zeninformation></zeninformation>
-<zenfooter></zenfooter> -->
-<!-- <product-container></product-container> -->
-<!-- <app-comment-container></app-comment-container> -->
+<zenfooter></zenfooter>
+<product-container></product-container>
+<app-comment-container></app-comment-container> -->
 <!-- <div appZencolor ='{"color":"grey","border":"2px","padding":"40px"}'> This Is Directive</div> -->
 <!-- <div appZencolor = "green">I Am Here</div> -->
 <!-- <app-calculator></app-calculator> -->
-<app-feedback></app-feedback>
+<!-- <app-feedback></app-feedback>
+
+<input type="checkbox" [(ngModel)]="showHide">  {{showHide}}
+<div *zenIf = [showHide] >I am visible</div> -->
+<h1>This is link</h1>
+   
+
+<a routerLink="calculator">calculator</a>
+<a routerLink="feedback/1">feedback</a>
+
+<router-outlet></router-outlet>

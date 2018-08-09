@@ -1,4 +1,76 @@
+
 <div>
-  <button [disabled]="!show" (click)="addInputBox()">+</button>
-  <div #boxnew></div>
+  <h2>Feedback</h2>
+  
+  <div *ngFor ="let category of tickObject;index as outerIndex">{{category.title}} : 
+      <button  *ngFor =  "let singleOb of category.buttonArray; index as i " (click)="toggeleTick(outerIndex,i)">
+          <span [hidden]="singleOb.tick">&#10004;</span>{{singleOb.text}}
+        </button>
+        <span class="span-box" (click)="addInputBox()"> + </span>
+        <div #boxnew>
+   
+        </div>
+
+  </div>
+  
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+  <h1>About the course </h1>
+  <span class="span-box" (click)="addInputBox()"> + </span>
+  <br>
+
+  <!-- <button  *ngFor =  "let objs of tickObject.course; index as i " (click)="toggeleTick('course',i)">
+      <span [hidden]="tickObject.course[i].tick">&#10004;</span>In-Depth Explanation</button> -->
+  <!-- <button (click)="toggeleTick('course',0)">
+    <span [hidden]="tickObject.course[0].tick">&#10004;</span>In-Depth Explanation</button>
+  <button (click)="toggeleTick('course',1)">
+    <span [hidden]="tickObject.course[1].tick">&#10004;</span>Swift pace</button>
+  <button (click)="toggeleTick('course',2)">
+    <span [hidden]="tickObject.course[2].tick">&#10004;</span>Englightening</button>
+  <div #boxnew>
+   
+  </div>
+  <hr>
+
+  <h1>About the Instructor </h1>
+  <span class="span-box" (click)="addInputBox()"> + </span>
+  <br>
+  <button (click)="toggeleTick('instructor',0)">
+    <span [hidden]="tickObject.instructor[0].tick">&#9989;</span>In-Depth Explanation</button>
+  <button (click)="toggeleTick('instructor',1)">
+    <span [hidden]="tickObject.instructor[1].tick">&#9989;</span>In-Depth Explanation</button>
+  <button (click)="toggeleTick('instructor',2)">
+    <span [hidden]="tickObject.instructor[2].tick">&#9989;</span>In-Depth Explanation</button>
+  <div #boxnew>
+   
+  </div>
+  <hr>
+
+
+  <h1>About the improvements </h1>
+  <span class="span-box" (click)="addInputBox()"> + </span>
+  <br>
+  <button (click)="toggeleTick('improvement',0)">
+    <span [hidden]="tickObject.improvement[0].tick">&#9989;</span>In-Depth Explanation</button>
+  <button (click)="toggeleTick('improvement',1)">
+    <span [hidden]="tickObject.improvement[1].tick">&#9989;</span>In-Depth Explanation</button>
+  <button (click)="toggeleTick('improvement',2)">
+    <span [hidden]="tickObject.improvement[2].tick">&#9989;</span>In-Depth Explanation</button>
+  <div #boxnew>
+  
+  </div>
+  <hr>
+</div> -->

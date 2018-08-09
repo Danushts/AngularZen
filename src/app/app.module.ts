@@ -1,8 +1,10 @@
+import { ZenRouteModule } from './app.route';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
+
 import { ZenbannerComponent } from "./zenbanner/zenbanner.component";
 import { ZenmenuComponent } from "./zenmenu/zenmenu.component";
 import { ZeninformationComponent } from "./zeninformation/zeninformation.component";
@@ -15,6 +17,8 @@ import { ZencolorDirective } from './zencolor.directive';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CalService } from "./cal.service";
 import { FeedbackComponent } from './feedback/feedback.component';
+import { ZenIfDirective } from './zen-if.directive';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -30,9 +34,11 @@ import { FeedbackComponent } from './feedback/feedback.component';
     CommentContainerComponent,
     ZencolorDirective,
     CalculatorComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    ZenIfDirective,
+    PagenotfoundComponent
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule,ZenRouteModule],
   providers: [CalService],
   bootstrap: [AppComponent]
 })
