@@ -7,6 +7,7 @@ import {
 } from "@angular/core";
 import {ActivatedRoute} from '@angular/router'
 
+
 @Component({
   selector: "app-feedback",
   templateUrl: "./feedback.component.html",
@@ -57,8 +58,6 @@ export class FeedbackComponent implements OnInit {
   }
 
   addInputBox() {
-
-    
     console.log(this.boxvar);
     if (!this.inputCreated) {
       let inputBox = this.rendererOb.createElement("input");
