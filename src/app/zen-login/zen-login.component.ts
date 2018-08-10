@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-zen-login',
@@ -9,10 +10,13 @@ export class ZenLoginComponent implements OnInit {
 
   userName:String;
   password:string;
+  errorMsg:string;
 
-  constructor() { }
+  constructor(private routerService:ActivatedRoute) { }
 
   ngOnInit() {
+    console.log(this.routerService.snapshot.params['msg']);
+    this.errorMsg = this.routerService.snapshot.params['msg'];
   }
 
   doLogin(){

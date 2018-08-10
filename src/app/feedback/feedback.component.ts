@@ -14,7 +14,8 @@ import {ActivatedRoute} from '@angular/router'
   styleUrls: ["./feedback.component.css"]
 })
 export class FeedbackComponent implements OnInit {
-  @ViewChild("boxnew") boxvar: ElementRef;      
+  @ViewChild("boxnew") 
+  boxvar: ElementRef;      
   public inputCreated = false;
   hideTick = true;
   // tickArray = [{ tick: true }, { tick: true }, { tick: true }];

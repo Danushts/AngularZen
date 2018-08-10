@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -11,8 +12,9 @@ export class LoginComponent implements OnInit {
   student: any;
   age: number = 10;
   borderValue:number=4;
+  errorMsg:string
   
-  constructor() {
+  constructor(private routerService:ActivatedRoute) {
     var that = this ;
     setTimeout(function() {
       that.student = {
@@ -23,6 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.errorMsg = this.routerService.snapshot.params['msg'];
   }
   doLogin() {
     if (this.username == undefined) {

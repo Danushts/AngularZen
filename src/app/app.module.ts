@@ -5,6 +5,8 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
 
+
+
 import { ZenbannerComponent } from "./zenbanner/zenbanner.component";
 import { ZenmenuComponent } from "./zenmenu/zenmenu.component";
 import { ZeninformationComponent } from "./zeninformation/zeninformation.component";
@@ -19,12 +21,15 @@ import { CalService } from "./cal.service";
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ZenIfDirective } from './zen-if.directive';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { AuthorizerGuard } from './_guards/authorizer.guard';
+import { ZenLoginComponent } from './zen-login/zen-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ZenbannerComponent,
+    ZenLoginComponent,
     ZenmenuComponent,
     ZeninformationComponent,
     ZenfooterComponent,
@@ -39,7 +44,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     PagenotfoundComponent
   ],
   imports: [BrowserModule, FormsModule,ZenRouteModule],
-  providers: [CalService],
+  providers: [CalService,AuthorizerGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
