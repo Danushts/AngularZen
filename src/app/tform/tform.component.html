@@ -1,0 +1,11 @@
+<div>
+  <form (ngSubmit)="submimtForm(formOb)" novalidate #formOb = "ngForm">
+    <input type="text" name="pName"  ngModel="pName"><br>
+    <input type="text" name="companyemail" required #companyEmail = "ngModel" ngModel>
+    <span *ngIf="companyEmail.errors && companyEmail.touched">Please Enter the value</span><br>
+    <input type="text" name="companyname" #companyName = "ngModel" ngModel><br>
+    <input type="submit" value="Submit Form"><br>
+  </form>
+
+  {{formOb.value|json}}
+</div>

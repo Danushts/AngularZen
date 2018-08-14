@@ -23,6 +23,7 @@ import { ZenIfDirective } from './zen-if.directive';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AuthorizerGuard } from './_guards/authorizer.guard';
 import { ZenLoginComponent } from './zen-login/zen-login.component';
+import { TformComponent } from './tform/tform.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ZenLoginComponent } from './zen-login/zen-login.component';
     CalculatorComponent,
     FeedbackComponent,
     ZenIfDirective,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    TformComponent
   ],
   imports: [BrowserModule, FormsModule,ZenRouteModule],
   providers: [CalService,AuthorizerGuard],
