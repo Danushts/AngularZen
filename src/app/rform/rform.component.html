@@ -1,0 +1,8 @@
+<div>
+  <form [formGroup]='reactiveForm' (ngSubmit)='submitMyForm(reactiveForm)'>
+    <input type="text" formControlName='name' ><br>
+    <input type="number" formControlName='age'><br>
+    <textarea formControlName='description' cols="30" rows="10"></textarea><br>
+    <button [disabled]='reactiveForm.invalid'>submit</button>
+  </form>
+</div>
