@@ -23,6 +23,7 @@ import { AuthorizerGuard } from "./_guards/authorizer.guard";
 import { ZenLoginComponent } from "./zen-login/zen-login.component";
 import { TformComponent } from "./tform/tform.component";
 import { RformComponent } from "./rform/rform.component";
+import { RgerrorsComponent } from './rgerrors/rgerrors.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { RformComponent } from "./rform/rform.component";
     ZenIfDirective,
     PagenotfoundComponent,
     TformComponent,
-    RformComponent
+    RformComponent,
+    RgerrorsComponent
   ],
   imports: [BrowserModule, FormsModule, ZenRouteModule, ReactiveFormsModule],
   providers: [CalService, AuthorizerGuard],

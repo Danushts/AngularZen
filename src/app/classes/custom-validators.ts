@@ -7,12 +7,10 @@ export class CustomValidators {
         console.log('ran validator '+a.value);
         if( (a.value <18 || a.value > 139 )){
           console.log('invalid')
-          return {'confused':true};
+          return {'errorMsg':'Your age should be greater Than 18 and less than 139'};
         }
         return null;
       };
 
-      public static NameValidator(name:FormControl):ValidationErrors{
-        if((name.value.length < 3))
-      }
+     
 }
