@@ -23,12 +23,16 @@ export class RformComponent implements OnInit {
     this.reactiveForm = new FormGroup({
       'name':new FormControl('',[Validators.required]),
      // 'age' :new FormControl('',[Validators.min(18),Validators.required]),
-     'age' :new FormControl('',[CustomValidators.AgeValidator]),
+     'age' :new FormControl('',[]),
       'description':new FormControl()
     });
   }
 
   ngOnInit() {
+  }
+
+  get age(){
+    return this.reactiveForm.get('age');
   }
 
   submitMyForm(formOb){

@@ -18,7 +18,11 @@ export class RgerrorsComponent {
       (this.inputControl.dirty || this.inputControl.touched);
   }
 
-  errors():string[]{
-    return this.inputControl.errors['errorMsg'];
+  errors(){
+    let errors = Object.keys(this.inputControl.errors);
+    let errorString = "Errors Are Following: "+errors.join(' And ');
+    console.dir(this.inputControl.errors);
+    return errorString;
+    // return this.inputControl.errors['errorMsg'];
   }
 }

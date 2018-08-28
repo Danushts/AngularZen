@@ -2,10 +2,15 @@
   <form [formGroup]='reactiveForm' (ngSubmit)='submitMyForm(reactiveForm)' novalidate>
     <input type="text" formControlName='name' ><br>
     <app-rgerrors [inputControl]="reactiveForm.controls.name"></app-rgerrors>
-    <input type="number" formControlName='age'><br>
-    <app-rgerrors [inputControl]="reactiveForm.controls.age"></app-rgerrors>
+    <input type="number"  formControlName='age' age-validate>
+    <div *ngIf="age.touched && age.invalid">
+    <span *ngIf="age.errors" >Please Enter The Age</span>
+  </div>
+    <!-- <span *ngIf="age.errors.required && age.invalid" >Your age should be greater Than 18 and less than 139!</span> -->
+    <!-- <span >Please Enter The Age</span> -->
+    <!-- <app-rgerrors [inputControl]="reactiveForm.controls.age"></app-rgerrors> -->
 
-    <textarea formControlName='description' cols="30" rows="10"></textarea><br>
+    <br><textarea formControlName='description' cols="30" rows="10"></textarea><br>
     <button [disabled]='reactiveForm.invalid'>submit</button>
   </form>
 </div>

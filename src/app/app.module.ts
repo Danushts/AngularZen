@@ -24,6 +24,7 @@ import { ZenLoginComponent } from "./zen-login/zen-login.component";
 import { TformComponent } from "./tform/tform.component";
 import { RformComponent } from "./rform/rform.component";
 import { RgerrorsComponent } from './rgerrors/rgerrors.component';
+import { AgevalidateDirective } from './agevalidate.directive';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { RgerrorsComponent } from './rgerrors/rgerrors.component';
     PagenotfoundComponent,
     TformComponent,
     RformComponent,
-    RgerrorsComponent
+    RgerrorsComponent,
+    AgevalidateDirective
   ],
   imports: [BrowserModule, FormsModule, ZenRouteModule, ReactiveFormsModule],
   providers: [CalService, AuthorizerGuard],
