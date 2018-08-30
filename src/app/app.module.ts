@@ -1,3 +1,6 @@
+import { HttpclientService } from './service/httpclient.service';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { ZenRouteModule } from "./app.route";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
@@ -25,6 +28,10 @@ import { TformComponent } from "./tform/tform.component";
 import { RformComponent } from "./rform/rform.component";
 import { RgerrorsComponent } from './rgerrors/rgerrors.component';
 import { AgevalidateDirective } from './agevalidate.directive';
+import { HttpclientComponent } from './httpclient/httpclient.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -47,10 +54,11 @@ import { AgevalidateDirective } from './agevalidate.directive';
     TformComponent,
     RformComponent,
     RgerrorsComponent,
-    AgevalidateDirective
+    AgevalidateDirective,
+    HttpclientComponent
   ],
-  imports: [BrowserModule, FormsModule, ZenRouteModule, ReactiveFormsModule],
-  providers: [CalService, AuthorizerGuard],
+  imports: [BrowserModule, FormsModule, ZenRouteModule, ReactiveFormsModule,HttpClientModule,HttpModule],
+  providers: [CalService, AuthorizerGuard,HttpclientService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

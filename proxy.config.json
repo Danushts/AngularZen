@@ -1,0 +1,20 @@
+{
+    "/ngbootcamp/api": {
+      "target": "http://localhost",
+      "secure": false,
+      "pathRewrite": {
+        "^/ngbootcamp/api": "/ngbootcamp/api"
+      }
+    },
+
+
+    "/coursedetails.php": {
+      "target": "http://localhost",
+      "secure": false,
+      "pathRewrite": {
+        "^/coursedetails.php": "/coursedetails.php"
+      }
+    }
+    
+  }
+  
